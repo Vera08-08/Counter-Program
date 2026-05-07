@@ -1,18 +1,10 @@
-// Counter program
-const decreaseBtn = document.getElementById('decreaseBtn');
-const resetBtn = document.getElementById('resetBtn');
-const increaseBtn = document.getElementById('increaseBtn');
-const counterLabel = document.getElementById('countLabel');
-let count = 0;
-increaseBtn.onclick = function() {
-    count++;
-    counterLabel.textContent   = count;
+const myButton = document.getElementById('myButton');
+const myLabel = document.getElementById('myLabel');
+const min = 1;
+const max = 6;
+let randomNum;
+myButton.onclick = function() {
+    randomNum = Math.floor(Math.random() * max) + min;
+    myLabel.textContent = randomNum;
 }
-decreaseBtn.onclick = function() {
-    count--;
-    counterLabel.textContent   = count;
-}
-resetBtn.onclick = function() {
-    count = 0;
-    counterLabel.textContent   = count;
-}
+
